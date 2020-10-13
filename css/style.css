@@ -1,0 +1,377 @@
+﻿@charset "utf-8";
+
+/* ===== 共通 ===== */
+
+html,
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #393939;
+    background: #efefef;
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+td,
+th,
+li {
+    line-height: 1.8;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #709a00;
+}
+
+a:hover {
+    color: #95cd00;
+}
+
+a:active {
+    color: #4b6700;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 共通の見出し */
+
+main h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #c84040;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1000px;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* ===== ヘッダ ===== */
+
+header {
+    background: #9fdaff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    padding: 10px 0;
+    width: 187px;
+    height: 36px;
+}
+
+.menu-btn {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/hamburger.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    header {
+        position: static;
+    }
+
+    .header-logo {
+        padding: 20px 0;
+        width: 200px;
+        height: 46px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+/* ===== ナビゲーション ===== */
+
+nav {
+    background: #5f5f5f;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    display: none;
+    list-style-type: none;
+}
+
+.navbar a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #fff;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.navbar a:hover {
+    background: #59bfff;
+    color: #000;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .navbar {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex !important;
+    }
+
+    .navbar li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .navbar a.nav-current {
+        background: #59bfff;
+    }
+}
+
+/* ===== メインエリア基本レイアウト ===== */
+
+main {
+    padding-bottom: 50px;
+    background: #efefef;
+}
+
+.main-logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .main-logo {
+        width: 300px;
+        height: auto;
+        margin: 40px auto 0;
+    }
+}
+
+.container p {
+    text-indent: 1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    -webkit-box-shadow: 0 10px 5px gray;
+    box-shadow: 0 10px 10px -3px gray;
+    padding: 15px;
+    border-radius: 0 0 50px 0;
+    background: #000589;
+    color: #fff;
+}
+
+/* キャッチコピー */
+
+.maincopy {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.maincopy strong {
+    color: #f8ff48;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    .maincopy {
+        font-size: 2.4rem;
+    }
+}
+
+.home-color1 {
+    display: inline-block;
+    color: #f8b173;
+    transform: rotate(20deg);
+    width: 40px;
+    height: 40px;
+    text-indent: 0;
+}
+
+.home-color2 {
+    display: inline-block;
+    transform: rotate(-5deg);
+    color: #74b9d9;
+    text-indent: 0;
+}
+
+.home-color3 {
+    color: #8bca85;
+    display: inline-block;
+    transform: rotate(5deg);
+    text-indent: 0;
+}
+
+.home-color4 {
+    color: #f8817e;
+    display: inline-block;
+    transform: rotate(-15deg);
+    text-indent: 0;
+}
+
+/* 見出し */
+
+.home-h2 {
+    padding-bottom: 3px;
+    padding-left: 5px;
+    margin: 30px 0 10px 0;
+    color: #c84040;
+    border-left: 10px solid #c84040;
+    border-bottom: 1px dashed #c84040;
+    font-size: 1.3rem;
+}
+
+/* お知らせ */
+
+.home-news {
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+
+/* コース紹介 */
+
+.home-course {
+    display: flex;
+    flex-flow: column;
+}
+
+.home-course li {
+    flex: 1 1 auto;
+    margin: 0 2px 4px 2px;
+    border: 5px solid #fff;
+    list-style-type: none;
+    background: #fff;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    .home-course {
+        flex-flow: row;
+    }
+}
+
+.home-course a {
+    color: #393939;
+    text-decoration: none;
+}
+
+.home-course figure:hover {
+    opacity: 0.5;
+}
+
+.home-course figcaption {
+    padding: 15px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ===== フッター ===== */
+
+footer {
+    background: #59bfff;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 画面幅が広い（タブレット・パソコン向け） */
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.footer-nav {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    display: inline;
+    padding: 0 1rem 0 0;
+}
+
+.footer-nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    opacity: 0.5;
+}
