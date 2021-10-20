@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+#grid{
+    display: grid;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: 400px 400px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+#grid .play{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#grid .stay{
+    grid-row: 1/2;
+    grid-column: 2/2;
+}
+
+#grid .eat{
+    grid-row: 2/2;
+    grid-column: 1/2;
+}
+
+#grid .buy{
+    grid-row: 2/2;
+    grid-column: 2/2;
+}
+
+#grid .right{
+    margin-top: 80px;
+    position: relative;
+}
+
+#grid .left{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#grid h3{
+    text-align: right;
+    /* margin: 0 22px 18px; */
+}
+
+#grid .contents{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#grid .contentsIMG{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#grid .contentsIMG img{
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+#grid a:hover .contentsIMG img{
+    transform: scale(1.1);
+}
+
+#grid .contentsIMG .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0);
+    transition: .3s;
+    letter-spacing: 0.2rem;
+}
+
+#grid a:hover .contentsIMG .bg{
+    background: rgba(0,0,0,0);
+}
+
+.contentsIMG .bg:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-image .3s;
+}
+
+#grid .play .contentsIMG .bg:before{
+    background: rgba(0,0,0,0)
+                url("../images/play_off.svg") no-repeat 50% 50%;
+}
+
+#grid .play a:hover .contentsIMG .bg:before{
+    background: rgba(0,0,0,0.2)
+                url("../images/play_on.svg") no-repeat 50% 50%;
+}
+
+
+#grid .stay .contentsIMG .bg:before{
+    background: rgba(0,0,0,0)
+                url("../images/stay_off.svg") no-repeat 50% 50%;
+}
+
+#grid .stay a:hover .contentsIMG .bg:before{
+    background: rgba(0,0,0,0.2)
+                url("../images/stay_on.svg") no-repeat 50% 50%;
+}
+
+
+#grid .eat .contentsIMG .bg:before{
+    background: rgba(0,0,0,0)
+                url("../images/eat_off.svg") no-repeat 50% 50%;
+}
+
+#grid .eat a:hover .contentsIMG .bg:before{
+    background: rgba(0,0,0,0.2)
+                url("../images/eat_on.svg") no-repeat 50% 50%;
+}
+
+#grid .buy .contentsIMG .bg:before{
+    background: rgba(0,0,0,0)
+                url("../images/buy_off.svg") no-repeat 50% 50%;
+}
+
+#grid .buy a:hover .contentsIMG .bg:before{
+    background: rgba(0,0,0,0.2)
+                url("../images/buy_on.svg") no-repeat 50% 50%;
+}
+
+#grid .contents span{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 38px;
+    height: 38px;
+    color: #fff;
+    line-height: 38px;
+    background: #bc3f3f;
+    border-radius: 20px;
+    z-index: 3;
+}
